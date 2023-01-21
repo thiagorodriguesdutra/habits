@@ -2,8 +2,15 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Habits</title>
   </head>
   <body>
@@ -20,56 +27,46 @@
             </svg>
             <h1>habits</h1>
         </div>
-        <button>Registrar meu dia</button>
       </header>
+      
       <main>
-        <div class="column">
-
-          <div>
-            <span>03/01</span>
-            <form>
-              <p><span>🏃🏻‍♂️</span></p>
-              <input type="checkbox" />
-            </form>
-          </div>
-
-          <div>
-            <form>
-              <p><span>💧</span></p>
-              <input type="checkbox" />
-            </form>
-          </div>
-
-          <div>
-            <form>
-              <p><span>💪🏼</span></p>
-              <input type="checkbox" />
-            </form>
-          </div>
-
-          <div>
-            <form>
-              <p><span>💤</span></p>
-              <input type="checkbox" id="checkbox" />
-              <label for="checkbox"></label>
-            </form>
-          </div>
-
-          <div>
-            <form>
-              <p><span>🦮</span></p>
-              <input type="checkbox" />
-            </form>
-          </div>
-
-          <div>
-            <form>
-              <p><span>🥗</span></p>
-              <input type="checkbox" />
-            </form>
-          </div>
-
+        <div class="activities">
+          <p></p>
+          <p>🏃🏻‍♂️</p>
+          <p>💧</p>
+          <p>💪🏼</p>
+          <p>💤</p>
+          <p>🦮</p>
+          <p>🥗</p>
         </div>
+        <form>
+          <time>13/01</time>
+          <span class="checkmark">
+            <input type="checkbox" name="" id="">
+          </span>
+          <span class="checkmark">
+            <input type="checkbox" name="" id="">
+          </span>
+          <span class="checkmark">
+            <input type="checkbox" name="" id="">
+          </span>
+          <span class="checkmark">
+            <input type="checkbox" name="" id="">
+          </span>
+          <span class="checkmark">
+            <input type="checkbox" name="" id="">
+          </span>
+          <span class="checkmark">
+            <input type="checkbox" name="" id="">
+          </span>
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M3.125 10H16.875" stroke="#8B5CF6" stroke-width="1.88" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 3.125V16.875" stroke="#8B5CF6" stroke-width="1.88" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            <span>Registrar meu dia</span>
+          </button>
+        </form>
       </main>
     </div>
   </body>
