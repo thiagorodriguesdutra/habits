@@ -38,14 +38,14 @@ time {
     justify-content: space-between;
 }
 
-.wrapper header h1 {
+.wrapper header .logo > h1 {
     font-size: 3rem;
     font-weight: 800;
     line-height: 125%;
     color: #fff;
 }
 
-button {
+.wrapper header > button {
     position: absolute;
     top: 3rem;
     right: 2rem;
@@ -68,41 +68,53 @@ button {
 
 }
 
-.activities {
+.habits-form {
+    margin-top: 4.5rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1rem;
-}
-
-.activities p {
-    font-size: 2rem;
-}
-
-main {
-    margin-top: 4rem;
-    display: flex;
+    flex-direction: row;
     gap: 2rem;
 }
 
-main form {
+.habits, .check-habits {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
     gap: 1rem;
 }
 
-main form input[type="checkbox"] {
-    all: unset;
+.habit {
+    text-align: center;
     width: 4rem;
     height: 4rem;
-    border: 2px solid #27272A;
-    border-radius: 8px;
-    display: inline-block;
+    font-size: 2.5rem;
 }
 
-input[type="checkbox"]:checked {
+.checkmark input[type="checkbox"] {
+    width: 4rem;
+    height: 4rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 2px solid #27272A;
+    border-radius: 8px;
+    display: block;
+}
+
+.checkmark input[type="checkbox"]:checked {
     background-color: #8B5CF6;
     border: 2px solid #A78BFA;
 }
+
+.date {
+    position: absolute;
+    top: 140px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 125%;
+    color: #fff;
+}
+
+
+
+
