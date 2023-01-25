@@ -1,20 +1,21 @@
-const form = document.querySelectorAll('form').item(0);
-const today = new Date().toLocaleDateString('pt-Br', {
-    day: 'numeric',
-    month: 'numeric'
-});
-const recordedDays = []
+const $form = document.querySelectorAll('form').item(0);
+const $today = new Date().toLocaleDateString('pt-Br', {day: 'numeric', month: 'numeric'});
+const registredHabits = [];
+
+function checkIfTheDayIsIncluded() {
+    const dayAlreadyIncluded = registredHabits.includes($today.toString());
+
+    if(dayAlreadyIncluded) {
+        alert('Você já incluiu este dia!');
+    } else {
+        registredHabits.push($today);
+        handleRecordMyHabits();
+    }
+}
 
 function handleRecordMyHabits() {
-
-    recordedDays.filter(day => {
-        if(day === today) {
-            alert('Opa, você já registrou este dia!')
-        };
-    });
-
     const habitsQuantity = [1, 2, 3, 4, 5, 6];
-    const container = form.appendChild(document.createElement('div'));
+    const container = $form.appendChild(document.createElement('div'));
 
     container.classList.add('check-habits');
 
@@ -25,14 +26,10 @@ function handleRecordMyHabits() {
         container.lastElementChild.classList.add('checkmark');
     });
     
-    container.insertAdjacentHTML('beforeend', `<div class="date">${today}</div>`);
-
-    recordedDays.push(today);
-
-    callback()
+    container.insertAdjacentHTML('beforeend', `<div class="date">${$today}</div>`);
 };
 
-console.log(recordedDays)
+const $button = document.getElementById('record-button');
+$button.addEventListener("click", checkIfTheDayIsIncluded);
 
-const button = document.getElementById('record-button');
-button.addEventListener("click", handleRecordMyHabits);
+
