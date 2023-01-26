@@ -1,16 +1,16 @@
 const $form = document.querySelectorAll('form').item(0);
 const $today = new Date().toLocaleDateString('pt-Br', {day: 'numeric', month: 'numeric'});
-const registredHabits = [];
+
+const database = []
 
 function checkIfTheDayIsIncluded() {
-    const dayAlreadyIncluded = registredHabits.includes($today.toString());
+    const items = localStorage.getItem('items');
 
-    if(dayAlreadyIncluded) {
-        alert('Você já incluiu este dia!');
-    } else {
-        registredHabits.push($today);
-        handleRecordMyHabits();
-    }
+    items ?? localStorage.setItem('items', JSON.stringify([]));
+
+    const dayExist = items.includes($today)
+
+    dayExist ? alert('Este dia já foi adicionado!') : handleRecordMyHabits()
 }
 
 function handleRecordMyHabits() {
@@ -27,6 +27,8 @@ function handleRecordMyHabits() {
     });
     
     container.insertAdjacentHTML('beforeend', `<div class="date">${$today}</div>`);
+    database.push($today)
+    localStorage.setItem('items', JSON.stringify(database));
 };
 
 const $button = document.getElementById('record-button');
