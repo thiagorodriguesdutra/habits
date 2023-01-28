@@ -4,15 +4,25 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 570px) {
+    button > span {
+        display: none;
+    }
+}
+
 body {
     background-color: #09090a;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #fff;
+    
 }
 
 header {
+    position: fixed;
+    width: 100%;
     padding: 3rem;
+    background-color: #09090a;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,10 +38,56 @@ button {
     line-height: 125%;
     font-size: 1rem;
     color: #fff;
+    cursor: pointer;
 
     display: flex;
     align-items: center;
     gap: 0.75rem;
+}
+
+#form-habits {
+    width: fit-content;
+    padding: 12rem 3rem 3rem;
+    display: flex;
+}
+
+.habits {
+    margin-top: 3.563rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.habit {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days {
+    margin-left: 2rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.day div {
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 125%;
+    text-align: center;
+    color: #A1A1AA;
 }
 
 input {
@@ -41,12 +97,14 @@ input {
     appearance: none;
     border: 2px solid #27272a;
     border-radius: 8px;
+    cursor: pointer;
 }
 
-input[type='checkbox']:checked {
+input:checked {
     border: 2px solid #a78bfa;
     background-color: #8b5cf6;
 }
+
 
 
 

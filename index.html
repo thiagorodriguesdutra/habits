@@ -16,18 +16,26 @@
   <body>
       <header>
         <img src="/assets/logo.svg" alt="">
-        <button>
+        <button title="Botão para registrar meus hábitos do dia">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M3.125 10H16.875" stroke="#8B5CF6" stroke-width="1.88" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M10 3.125V16.875" stroke="#8B5CF6" stroke-width="1.88" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>Registrar meu dia
+            </svg>
+            <span>Registrar meu dia</span>
         </button>
       </header>
 
-      <form>
-        <input type="checkbox" />
-        <input type="checkbox" />
+      <form id="form-habits">
+        <div class="habits">
+          <div class="habit" data-name="run">🏃🏻‍♂️</div>
+          <div class="habit" data-name="water">💧</div>
+          <div class="habit" data-name="food">🍎</div>
+          <div class="habit" data-name="journal">📔</div>
+          <div class="habit" data-name="takePills">💊</div>
+        </div>
+        <div class="days"></div>
       </form>
+      <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>
